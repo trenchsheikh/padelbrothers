@@ -1,0 +1,17 @@
+{
+  "name": "PadelBrothers · Season 4",
+  "short_name": "PadelBrothers",
+  "description": "Live padel leaderboards — team & player Champs court standings. Saturdays at S3 Padel Brent Cross.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1610",
+  "theme_color": "#0f2219",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
