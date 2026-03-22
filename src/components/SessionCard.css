@@ -1,0 +1,76 @@
+.pb-session {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem 1.5rem;
+}
+
+.pb-session__title {
+  margin: 0 0 0.15rem;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+
+.pb-session__date {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pb-session__roster {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.pb-session__pair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  font-size: 0.88rem;
+}
+
+.pb-session__pair--hot {
+  border-color: var(--accent-border);
+  background: linear-gradient(
+    135deg,
+    rgba(143, 212, 168, 0.12),
+    var(--surface) 60%
+  );
+}
+
+.pb-session__pair-name {
+  font-weight: 500;
+  min-width: 0;
+}
+
+.pb-session__pair-wins {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pb-session__pair-dash {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.pb-session__hint {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.pb-session__hint strong {
+  color: var(--accent);
+}

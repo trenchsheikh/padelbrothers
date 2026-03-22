@@ -1,0 +1,26 @@
+/* PadelBrothers — dark green + cream / white */
+
+:root {
+  --bg-deep: #0a1610;
+  --bg: #0f2219;
+  --surface: #152f24;
+  --surface-2: #1a3d2e;
+  --border: #2d5a45;
+  --border-soft: rgba(45, 90, 69, 0.45);
+  --text: #f4faf7;
+  --text-muted: #9cbeb0;
+  --accent: #8fd4a8;
+  --accent-dim: rgba(143, 212, 168, 0.15);
+  --accent-border: rgba(143, 212, 168, 0.45);
+  --warn: #e8c96a;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+  /* Sporty: condensed poster titles + clean athletic UI */
+  --font-display: 'Bebas Neue', 'Oswald', Impact, sans-serif;
+  --font-body: 'Barlow', system-ui, sans-serif;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --space: 1rem;
+  --max: 42rem;
+}

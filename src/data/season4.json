@@ -1,0 +1,98 @@
+{
+  "id": "season-4",
+  "number": 4,
+  "label": "Season 4",
+  "weeks": [
+    {
+      "id": "week-2026-03-21",
+      "date": "2026-03-21",
+      "label": "21 Mar 2026",
+      "entries": [
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000001",
+          "playerA": "Liban",
+          "playerB": "Abdullah",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000002",
+          "playerA": "Saleh",
+          "playerB": "Abdul",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000003",
+          "playerA": "Guled",
+          "playerB": "Faysal",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000004",
+          "playerA": "AM",
+          "playerB": "Jibreal",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000005",
+          "playerA": "Hafid",
+          "playerB": "Omar S",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000006",
+          "playerA": "Basher",
+          "playerB": "Ibby",
+          "champsWins": 1
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000007",
+          "playerA": "Sean",
+          "playerB": "Izzy",
+          "champsWins": 1
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000008",
+          "playerA": "Anass",
+          "playerB": "Omz",
+          "champsWins": 6
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000009",
+          "playerA": "Tallz",
+          "playerB": "Mahad",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000010",
+          "playerA": "Muhammed",
+          "playerB": "Abdisalam",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000011",
+          "playerA": "Bobo",
+          "playerB": "Ahmed",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000012",
+          "playerA": "Sami",
+          "playerB": "Ayub",
+          "champsWins": 3
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000013",
+          "playerA": "Yassin",
+          "playerB": "Khalid",
+          "champsWins": 0
+        },
+        {
+          "id": "a1b2c3d4-0001-4000-8000-000000000014",
+          "playerA": "Nadir",
+          "playerB": "Sabah",
+          "champsWins": 0
+        }
+      ]
+    }
+  ]
+}

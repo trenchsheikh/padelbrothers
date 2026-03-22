@@ -1,0 +1,9 @@
+.pb-app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pb-main {
+  flex: 1;
+}
