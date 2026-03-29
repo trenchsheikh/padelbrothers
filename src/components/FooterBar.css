@@ -16,6 +16,30 @@
   color: var(--text-muted);
 }
 
+.pb-footer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pb-footer__live {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.pb-footer__live:hover {
+  filter: brightness(1.08);
+}
+
 .pb-footer__admin {
   border: 1px solid var(--accent-border);
   background: var(--accent-dim);

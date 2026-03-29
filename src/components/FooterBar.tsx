@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './FooterBar.css'
 
 interface FooterBarProps {
@@ -16,13 +17,18 @@ export function FooterBar({ updatedAt, onAdminClick }: FooterBarProps) {
       <p className="pb-footer__meta">
         <span className="pb-footer__updated">Last updated · {formatted}</span>
       </p>
-      <button
-        type="button"
-        className="pb-footer__admin"
-        onClick={onAdminClick}
-      >
-        Admin
-      </button>
+      <div className="pb-footer__actions">
+        <Link to="/live" className="pb-footer__live">
+          Live game
+        </Link>
+        <button
+          type="button"
+          className="pb-footer__admin"
+          onClick={onAdminClick}
+        >
+          Admin
+        </button>
+      </div>
     </footer>
   )
 }

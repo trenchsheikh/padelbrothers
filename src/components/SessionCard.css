@@ -4,10 +4,36 @@
   padding: 0 1.25rem 1.5rem;
 }
 
+.pb-session__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.15rem;
+}
+
 .pb-session__title {
-  margin: 0 0 0.15rem;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.15;
+}
+
+.pb-session__past {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pb-session__past:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
 }
 
 .pb-session__date {

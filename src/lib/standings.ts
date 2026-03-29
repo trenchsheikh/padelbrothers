@@ -1,4 +1,4 @@
-import type { Season, WeekEntry } from '../types'
+import type { Season, WeekEntry, WeekSession } from '../types'
 
 export function normalizeName(s: string): string {
   return s.trim().toLowerCase().replace(/\s+/g, ' ')
@@ -98,10 +98,14 @@ export function getPlayerStandings(season: Season): PlayerStandingRow[] {
     })
 }
 
-export function getLatestWeek(season: Season) {
-  const sorted = [...season.weeks].sort(
+export function getSortedWeeks(season: Season): WeekSession[] {
+  return [...season.weeks].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   )
+}
+
+export function getLatestWeek(season: Season) {
+  const sorted = getSortedWeeks(season)
   return sorted[0] ?? null
 }
 

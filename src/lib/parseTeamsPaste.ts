@@ -36,3 +36,7 @@ export function parseTeamsPaste(text: string): { playerA: string; playerB: strin
   }
   return out
 }
+
+export function formatTeamLabel(p: { playerA: string; playerB: string }): string {
+  return `${p.playerA.trim()} & ${p.playerB.trim()}`
+}
