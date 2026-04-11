@@ -4,6 +4,115 @@
   "label": "Season 4",
   "weeks": [
     {
+      "id": "week-2026-04-04",
+      "date": "2026-04-04",
+      "label": "4 Apr 2026",
+      "entries": [
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000001",
+          "playerA": "Bashir",
+          "playerB": "Guled",
+          "champsWins": 3
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000002",
+          "playerA": "Muhammed",
+          "playerB": "Tallz",
+          "champsWins": 1
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000003",
+          "playerA": "Sami",
+          "playerB": "Ayub",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000004",
+          "playerA": "Mardz",
+          "playerB": "AM",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000005",
+          "playerA": "Liban",
+          "playerB": "Mahad",
+          "champsWins": 5
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000006",
+          "playerA": "Abdul",
+          "playerB": "Omar Sufi",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000007",
+          "playerA": "Aymen",
+          "playerB": "Wadah",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000008",
+          "playerA": "Sule",
+          "playerB": "Jibreal",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000009",
+          "playerA": "Omz",
+          "playerB": "Yahiya",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000010",
+          "playerA": "Ibby",
+          "playerB": "Sean",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000011",
+          "playerA": "Saleh",
+          "playerB": "Faysal",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000012",
+          "playerA": "Adnan",
+          "playerB": "Jamshid",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000013",
+          "playerA": "Khalid",
+          "playerB": "Izzy",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000014",
+          "playerA": "Dahir",
+          "playerB": "Masud",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000015",
+          "playerA": "Romz",
+          "playerB": "Anas",
+          "champsWins": 1
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000016",
+          "playerA": "Abzz",
+          "playerB": "Nadir",
+          "champsWins": 0
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000017",
+          "playerA": "Hamza",
+          "playerB": "Ahmed A",
+          "champsWins": 1
+        }
+      ]
+    },
+    {
       "id": "week-2026-03-28",
       "date": "2026-03-28",
       "label": "28 Mar 2026",
