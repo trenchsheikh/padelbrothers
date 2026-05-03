@@ -25,7 +25,10 @@ export function HomePage() {
 
   return (
     <div className="pb-app">
-      <Header />
+      <Header
+        backLink={{ to: '/', label: '← Wrap-up' }}
+        variant="seasonFinale"
+      />
       <main className="pb-main">
         <Rules />
         <Leaderboard

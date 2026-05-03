@@ -4,110 +4,180 @@
   "label": "Season 4",
   "weeks": [
     {
+      "id": "week-2026-05-02",
+      "date": "2026-05-02",
+      "label": "2 May 2026",
+      "entries": [
+        {
+          "id": "e5f6a7b8-0005-4000-8000-000000000001",
+          "playerA": "Anas",
+          "playerB": "Romz",
+          "champsWins": 5
+        },
+        {
+          "id": "e5f6a7b8-0005-4000-8000-000000000002",
+          "playerA": "Liban",
+          "playerB": "Mustafa",
+          "champsWins": 4
+        },
+        {
+          "id": "e5f6a7b8-0005-4000-8000-000000000003",
+          "playerA": "Ahmed",
+          "playerB": "Tallz",
+          "champsWins": 2
+        },
+        {
+          "id": "e5f6a7b8-0005-4000-8000-000000000004",
+          "playerA": "Omar Sufi",
+          "playerB": "Khalid",
+          "champsWins": 1
+        },
+        {
+          "id": "e5f6a7b8-0005-4000-8000-000000000005",
+          "playerA": "Ayub",
+          "playerB": "Ibby",
+          "champsWins": 1
+        }
+      ]
+    },
+    {
+      "id": "week-2026-04-25",
+      "date": "2026-04-25",
+      "label": "25 Apr 2026",
+      "entries": [
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000001",
+          "playerA": "Tallz",
+          "playerB": "Ahmed A",
+          "champsWins": 6
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000002",
+          "playerA": "Omz",
+          "playerB": "Abdisalam",
+          "champsWins": 4
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000003",
+          "playerA": "Anas",
+          "playerB": "Izzy",
+          "champsWins": 2
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000004",
+          "playerA": "Ibby",
+          "playerB": "Liban",
+          "champsWins": 1
+        }
+      ]
+    },
+    {
+      "id": "week-2026-04-18",
+      "date": "2026-04-18",
+      "label": "18 Apr 2026",
+      "entries": [
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000101",
+          "playerA": "Omz",
+          "playerB": "Abdisalam",
+          "champsWins": 6
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000102",
+          "playerA": "Ibby",
+          "playerB": "Omar Sufi",
+          "champsWins": 3
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000103",
+          "playerA": "Muhammed",
+          "playerB": "Yahiya",
+          "champsWins": 2
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000104",
+          "playerA": "Liban",
+          "playerB": "Jibreal",
+          "champsWins": 2
+        }
+      ]
+    },
+    {
+      "id": "week-2026-04-11",
+      "date": "2026-04-11",
+      "label": "11 Apr 2026",
+      "entries": [
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000201",
+          "playerA": "Muhammed",
+          "playerB": "Yahiya",
+          "champsWins": 5
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000202",
+          "playerA": "Sean",
+          "playerB": "Guled",
+          "champsWins": 4
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000203",
+          "playerA": "Ahmed",
+          "playerB": "Abdisalam",
+          "champsWins": 2
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000204",
+          "playerA": "Ibby",
+          "playerB": "Masud",
+          "champsWins": 2
+        },
+        {
+          "id": "e5f6a7b8-0004-4000-8000-000000000205",
+          "playerA": "Liban",
+          "playerB": "Mahad",
+          "champsWins": 1
+        }
+      ]
+    },
+    {
       "id": "week-2026-04-04",
       "date": "2026-04-04",
       "label": "4 Apr 2026",
       "entries": [
         {
           "id": "c3d4e5f6-0003-4000-8000-000000000001",
-          "playerA": "Bashir",
-          "playerB": "Guled",
-          "champsWins": 3
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000002",
-          "playerA": "Muhammed",
-          "playerB": "Tallz",
-          "champsWins": 1
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000003",
-          "playerA": "Sami",
-          "playerB": "Ayub",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000004",
-          "playerA": "Mardz",
-          "playerB": "AM",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000005",
           "playerA": "Liban",
           "playerB": "Mahad",
           "champsWins": 5
         },
         {
-          "id": "c3d4e5f6-0003-4000-8000-000000000006",
-          "playerA": "Abdul",
-          "playerB": "Omar Sufi",
-          "champsWins": 0
+          "id": "c3d4e5f6-0003-4000-8000-000000000002",
+          "playerA": "Bashir",
+          "playerB": "Guled",
+          "champsWins": 3
         },
         {
-          "id": "c3d4e5f6-0003-4000-8000-000000000007",
-          "playerA": "Aymen",
-          "playerB": "Wadah",
-          "champsWins": 0
+          "id": "c3d4e5f6-0003-4000-8000-000000000003",
+          "playerA": "Sean",
+          "playerB": "Ibby",
+          "champsWins": 2
         },
         {
-          "id": "c3d4e5f6-0003-4000-8000-000000000008",
-          "playerA": "Sule",
-          "playerB": "Jibreal",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000009",
-          "playerA": "Omz",
-          "playerB": "Yahiya",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000010",
-          "playerA": "Ibby",
-          "playerB": "Sean",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000011",
-          "playerA": "Saleh",
-          "playerB": "Faysal",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000012",
-          "playerA": "Adnan",
-          "playerB": "Jamshid",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000013",
-          "playerA": "Khalid",
-          "playerB": "Izzy",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000014",
-          "playerA": "Dahir",
-          "playerB": "Masud",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000015",
-          "playerA": "Romz",
-          "playerB": "Anas",
+          "id": "c3d4e5f6-0003-4000-8000-000000000004",
+          "playerA": "Anas",
+          "playerB": "Romz",
           "champsWins": 1
         },
         {
-          "id": "c3d4e5f6-0003-4000-8000-000000000016",
-          "playerA": "Abzz",
-          "playerB": "Nadir",
-          "champsWins": 0
-        },
-        {
-          "id": "c3d4e5f6-0003-4000-8000-000000000017",
+          "id": "c3d4e5f6-0003-4000-8000-000000000005",
           "playerA": "Hamza",
           "playerB": "Ahmed A",
+          "champsWins": 1
+        },
+        {
+          "id": "c3d4e5f6-0003-4000-8000-000000000006",
+          "playerA": "Muhammed",
+          "playerB": "Tallz",
           "champsWins": 1
         }
       ]

@@ -71,8 +71,8 @@ export function Leaderboard({
         />
       )}
       <p className="pb-lb__note">
-        Totals are <strong>Champs court wins</strong> across Season 4 sessions
-        recorded below.
+        Final totals: <strong>Champs court wins</strong> across every Season 4
+        week we have on record.
       </p>
     </section>
   )

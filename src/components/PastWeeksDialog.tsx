@@ -1,9 +1,4 @@
-import {
-  forwardRef,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
+import { forwardRef, useMemo, useState } from 'react'
 import type { Season } from '../types'
 import { entryTeamLabel, getSortedWeeks } from '../lib/standings'
 import './PastWeeksDialog.css'
@@ -15,15 +10,14 @@ interface PastWeeksDialogProps {
 export const PastWeeksDialog = forwardRef<HTMLDialogElement, PastWeeksDialogProps>(
   function PastWeeksDialog({ season }, ref) {
     const weeks = useMemo(() => getSortedWeeks(season), [season])
-    const [selectedId, setSelectedId] = useState('')
+    const [userPick, setUserPick] = useState<string | null>(null)
 
-    useEffect(() => {
-      const w0 = weeks[0]
-      if (!w0) return
-      setSelectedId((id) =>
-        id && weeks.some((w) => w.id === id) ? id : w0.id,
-      )
-    }, [weeks])
+    const selectedId = useMemo(() => {
+      if (userPick != null && weeks.some((w) => w.id === userPick)) {
+        return userPick
+      }
+      return weeks[0]?.id ?? ''
+    }, [weeks, userPick])
 
     const selected = weeks.find((w) => w.id === selectedId) ?? weeks[0]
     const hasWins =
@@ -63,7 +57,7 @@ export const PastWeeksDialog = forwardRef<HTMLDialogElement, PastWeeksDialogProp
                     ? 'pb-past__chip pb-past__chip--active'
                     : 'pb-past__chip'
                 }
-                onClick={() => setSelectedId(w.id)}
+                onClick={() => setUserPick(w.id)}
               >
                 {w.label}
               </button>

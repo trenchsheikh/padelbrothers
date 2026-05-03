@@ -5,6 +5,22 @@
   text-align: center;
 }
 
+.pb-header__back {
+  margin: 0 0 0.85rem;
+  text-align: left;
+}
+
+.pb-header__back a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.pb-header__back a:hover {
+  text-decoration: underline;
+}
+
 .pb-header__eyebrow {
   margin: 0 0 0.4rem;
   font-family: var(--font-body);
@@ -58,4 +74,10 @@
   background: var(--surface);
   color: var(--text-muted);
   border: 1px solid var(--border-soft);
+}
+
+.pb-chip--accent {
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
+  color: var(--accent);
 }

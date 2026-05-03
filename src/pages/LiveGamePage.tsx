@@ -9,8 +9,8 @@ export function LiveGamePage() {
       <Header />
       <main className="pb-main pb-main--live">
         <p className="pb-live-back-wrap animate-in animate-delay-1">
-          <Link to="/" className="pb-live-back">
-            ← Back to leaderboards
+          <Link to="/season-4" className="pb-live-back">
+            ← Back to Season 4
           </Link>
         </p>
         <LiveGame />
