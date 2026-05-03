@@ -22,7 +22,7 @@
         },
         {
           "id": "e5f6a7b8-0005-4000-8000-000000000003",
-          "playerA": "Ahmed",
+          "playerA": "Ahmed A",
           "playerB": "Tallz",
           "champsWins": 2
         },
@@ -121,7 +121,7 @@
         },
         {
           "id": "e5f6a7b8-0004-4000-8000-000000000203",
-          "playerA": "Ahmed",
+          "playerA": "Ahmed A",
           "playerB": "Abdisalam",
           "champsWins": 2
         },
@@ -249,7 +249,7 @@
         },
         {
           "id": "b2c3d4e5-0002-4000-8000-000000000011",
-          "playerA": "Ahmed",
+          "playerA": "Ahmed A",
           "playerB": "AM",
           "champsWins": 0
         },
@@ -365,7 +365,7 @@
         {
           "id": "a1b2c3d4-0001-4000-8000-000000000011",
           "playerA": "Bobo",
-          "playerB": "Ahmed",
+          "playerB": "Ahmed A",
           "champsWins": 0
         },
         {
