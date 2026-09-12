@@ -9,7 +9,8 @@
 .pb-season-page__nav nav a { padding: 1.25rem 0; }
 .pb-season-page__nav [aria-current] { border-bottom: 3px solid #d5fa57; }
 .pb-season-page__nav a:hover { color: #d5fa57; }
-.pb-season-page__back { margin-left: auto; color: #a9e9bc !important; white-space: nowrap; }
+.pb-season-page__back { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-left: auto; padding: .65rem 1.6rem; border-radius: 0; background: #f5e64b; color: #103d2e !important; font-weight: 700; white-space: nowrap; }
+.pb-season-page__back:hover { background: #fff178; }
 .pb-season-page__hero { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem 0 1.6rem; }
 .pb-season-page__eyebrow { font: 1.15rem var(--font-display); letter-spacing: .12em; color: #a9e9bc; margin: 0 0 .5rem; }
 .pb-season-page__hero h1 { font-size: clamp(3.5rem, 8.2vw, 9rem); line-height: .95; letter-spacing: -.01em; color: inherit; margin: 0; }

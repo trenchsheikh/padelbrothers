@@ -15,12 +15,12 @@ function Arrow() {
 export function WelcomePage() {
   const joinDialog = useRef<HTMLDialogElement>(null)
 
-  function joinLink(className: string, label: string) {
+  function joinLink(className: string, label: string, showArrow = true) {
     return communityUrl ? (
-      <a className={className} href={communityUrl}>{label} <Arrow /></a>
+      <a className={className} href={communityUrl}>{label}{showArrow && <> <Arrow /></>}</a>
     ) : (
       <button className={className} type="button" onClick={() => joinDialog.current?.showModal()}>
-        {label} <Arrow />
+        {label}{showArrow && <> <Arrow /></>}
       </button>
     )
   }
@@ -35,7 +35,7 @@ export function WelcomePage() {
           <a href="#seasons">Seasons</a>
           <Link to="/season-4">The ladder</Link>
         </nav>
-        {joinLink('pb-landing__nav-join', 'Join the brothers')}
+        {joinLink('pb-landing__nav-join', 'Join', false)}
       </header>
 
       <main id="main">

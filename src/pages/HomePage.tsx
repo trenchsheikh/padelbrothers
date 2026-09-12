@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useLayoutEffect, useMemo, useState } from 'react'
 import { AdminPasswordModal } from '../components/AdminPasswordModal'
 import { AdminPanel } from '../components/AdminPanel'
 import { FooterBar } from '../components/FooterBar'
@@ -15,6 +15,10 @@ import '../App.css'
 import './HomePage.css'
 
 export function HomePage() {
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [])
+
   const { season, updatedAt, saveSeason, resetToSeed } = useSeasonState()
   const [tab, setTab] = useState<LeaderboardTab>('teams')
   const [adminOpen, setAdminOpen] = useState(false)
@@ -34,7 +38,7 @@ export function HomePage() {
           <a href="/#seasons">Seasons</a>
           <Link to="/season-4" aria-current="page">The ladder</Link>
         </nav>
-        <Link to="/" className="pb-season-page__back">Back to home <span aria-hidden="true">↗</span></Link>
+        <Link to="/" className="pb-season-page__back">Home</Link>
       </header>
       <main id="standings">
         <div className="pb-season-page__hero">
