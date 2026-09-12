@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { AdminPasswordModal } from '../components/AdminPasswordModal'
 import { AdminPanel } from '../components/AdminPanel'
 import { FooterBar } from '../components/FooterBar'
-import { Header } from '../components/Header'
+import { Link } from 'react-router-dom'
 import {
   Leaderboard,
   type LeaderboardTab,
@@ -12,6 +12,7 @@ import { SessionCard } from '../components/SessionCard'
 import { useSeasonState } from '../hooks/useSeasonState'
 import { getPlayerStandings, getTeamStandings } from '../lib/standings'
 import '../App.css'
+import './HomePage.css'
 
 export function HomePage() {
   const { season, updatedAt, saveSeason, resetToSeed } = useSeasonState()
@@ -24,20 +25,39 @@ export function HomePage() {
   const playerRows = useMemo(() => getPlayerStandings(season), [season])
 
   return (
-    <div className="pb-app">
-      <Header
-        backLink={{ to: '/', label: '← Wrap-up' }}
-        variant="seasonFinale"
-      />
-      <main className="pb-main">
-        <Rules />
-        <Leaderboard
-          tab={tab}
-          onTabChange={setTab}
-          teamRows={teamRows}
-          playerRows={playerRows}
-        />
-        <SessionCard season={season} />
+    <div className="pb-app pb-season-page">
+      <a className="pb-season-page__skip" href="#standings">Skip to standings</a>
+      <header className="pb-season-page__nav">
+        <Link to="/" className="pb-season-page__brand">Padel Brothers</Link>
+        <nav aria-label="Main navigation">
+          <a href="/#community">Community</a>
+          <a href="/#seasons">Seasons</a>
+          <Link to="/season-4" aria-current="page">The ladder</Link>
+        </nav>
+        <Link to="/" className="pb-season-page__back">Back to home <span aria-hidden="true">↗</span></Link>
+      </header>
+      <main id="standings">
+        <div className="pb-season-page__hero">
+          <div>
+            <p className="pb-season-page__eyebrow">S3 Brent Cross · Season complete</p>
+            <h1>The final ladder.</h1>
+            <p className="pb-season-page__subtitle">Season 4 / Final team &amp; player standings</p>
+          </div>
+          <div className="pb-season-page__number" aria-hidden="true"><span>Season</span>04</div>
+        </div>
+        <div className="pb-season-page__grid">
+          <Leaderboard
+            tab={tab}
+            onTabChange={setTab}
+            teamRows={teamRows}
+            playerRows={playerRows}
+          />
+          <aside className="pb-season-page__sidebar" aria-label="Season information">
+            <Rules />
+            <SessionCard season={season} />
+            <p className="pb-season-page__signoff">Final totals. Big games. Bigger bragging rights.</p>
+          </aside>
+        </div>
       </main>
       <FooterBar
         updatedAt={updatedAt}

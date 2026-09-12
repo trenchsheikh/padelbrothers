@@ -1,27 +1,7 @@
-.pb-rules {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 1.25rem 1.25rem;
-}
-
-.pb-rules__title {
-  margin: 0 0 0.65rem;
-  font-size: 1.25rem;
-  line-height: 1.15;
-}
-
-.pb-rules__list {
-  margin: 0;
-  padding-left: 1.15rem;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-
-.pb-rules__list li {
-  margin-bottom: 0.45rem;
-}
-
-.pb-rules__list strong {
-  color: var(--text);
-  font-weight: 600;
-}
+.pb-rules { padding: 1.7rem; background: #a9e9bc; color: #103d2e; border-radius: 2px; }
+.pb-rules h2 { margin: 0 0 1.2rem; padding-bottom: .8rem; border-bottom: 1px solid #103d2e; color: inherit; font-size: clamp(1.7rem, 2.5vw, 2.4rem); line-height: 1.1; letter-spacing: 0; }
+.pb-rules ol { list-style: none; padding: 0; margin: 0; counter-reset: rule; }
+.pb-rules li { position: relative; padding-left: 3.3rem; counter-increment: rule; margin-top: 1.3rem; }
+.pb-rules li::before { content: counter(rule, decimal-leading-zero); position: absolute; left: 0; top: -.2rem; font: 2.3rem var(--font-display); }
+.pb-rules strong { font-weight: 700; }
+.pb-rules p { font-size: .9rem; margin: .3rem 0 0; line-height: 1.45; }
