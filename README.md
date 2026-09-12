@@ -1,3 +1,11 @@
+## Community homepage
+
+The homepage uses a responsive, image-free design. Season 4 standings remain at `/season-4` and the live game remains at `/live`.
+
+To connect the Join buttons to the official community invitation or registration page, copy `.env.example` to `.env.local` and set `VITE_COMMUNITY_URL` to its HTTPS URL. Restart the dev server or rebuild after changing it. Without a URL, the buttons open an accessible notice that registration details are pending; no signup data is collected.
+
+The Season 5 copy retains the existing June–July 2026 announcement. Update the announcement in `src/pages/WelcomePage.tsx` when new dates are confirmed.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
