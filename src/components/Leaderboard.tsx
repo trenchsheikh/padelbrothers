@@ -1,137 +1,93 @@
+import { useState, type KeyboardEvent } from 'react'
 import type { PlayerStandingRow, TeamStandingRow } from '../lib/standings'
 import './Leaderboard.css'
 
 export type LeaderboardTab = 'teams' | 'players'
-
 interface LeaderboardProps {
   tab: LeaderboardTab
-  onTabChange: (t: LeaderboardTab) => void
+  onTabChange: (tab: LeaderboardTab) => void
   teamRows: TeamStandingRow[]
   playerRows: PlayerStandingRow[]
 }
+const PAGE_SIZE = 8
 
-export function Leaderboard({
-  tab,
-  onTabChange,
-  teamRows,
-  playerRows,
-}: LeaderboardProps) {
-  return (
-    <section
-      className="pb-lb animate-in animate-delay-2"
-      aria-labelledby="lb-heading"
-    >
-      <div className="pb-lb__head">
-        <h2 id="lb-heading" className="pb-lb__title">
-          Leaderboards
-        </h2>
-        <div
-          className="pb-seg"
-          role="tablist"
-          aria-label="Leaderboard type"
-        >
-          <button
-            type="button"
-            role="tab"
-            aria-selected={tab === 'teams'}
-            className={`pb-seg__btn${tab === 'teams' ? ' pb-seg__btn--active' : ''}`}
-            onClick={() => onTabChange('teams')}
-          >
-            Teams
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={tab === 'players'}
-            className={`pb-seg__btn${tab === 'players' ? ' pb-seg__btn--active' : ''}`}
-            onClick={() => onTabChange('players')}
-          >
-            Players
-          </button>
-        </div>
-      </div>
+export function Leaderboard({ tab, onTabChange, teamRows, playerRows }: LeaderboardProps) {
+  const [query, setQuery] = useState('')
+  const [page, setPage] = useState(1)
+  const rows = tab === 'teams'
+    ? teamRows.map((row, index) => ({ key: row.key, rank: index + 1, name: row.label, wins: row.totalChampsWins }))
+    : playerRows.map((row, index) => ({ key: row.name, rank: index + 1, name: row.name, wins: row.totalChampsWins }))
+  const filtered = rows.filter(row => row.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()))
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
+  const currentPage = Math.min(page, pageCount)
+  const start = (currentPage - 1) * PAGE_SIZE
+  const visibleRows = filtered.slice(start, start + PAGE_SIZE)
+  const pages = Array.from({ length: pageCount }, (_, i) => i + 1)
+    .filter(n => n === 1 || n === pageCount || Math.abs(n - currentPage) <= 1)
 
-      {tab === 'teams' ? (
-        <LeaderTable
-          rows={teamRows.map((r, i) => ({
-            rank: i + 1,
-            primary: r.label,
-            wins: r.totalChampsWins,
-          }))}
-          primaryLabel="Team"
-        />
-      ) : (
-        <LeaderTable
-          rows={playerRows.map((r, i) => ({
-            rank: i + 1,
-            primary: r.name,
-            wins: r.totalChampsWins,
-          }))}
-          primaryLabel="Player"
-        />
-      )}
-      <p className="pb-lb__note">
-        Final totals: <strong>Champs court wins</strong> across every Season 4
-        week we have on record.
-      </p>
-    </section>
-  )
-}
-
-function LeaderTable({
-  rows,
-  primaryLabel,
-}: {
-  rows: { rank: number; primary: string; wins: number }[]
-  primaryLabel: string
-}) {
-  if (rows.length === 0) {
-    return (
-      <p className="pb-lb__empty">No results yet — add a session in Admin.</p>
-    )
+  function selectTab(next: LeaderboardTab) {
+    onTabChange(next)
+    setQuery('')
+    setPage(1)
+  }
+  function handleTabKey(event: KeyboardEvent<HTMLButtonElement>) {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return
+    event.preventDefault()
+    const next = event.key === 'Home' ? 'teams' : event.key === 'End' ? 'players' : tab === 'teams' ? 'players' : 'teams'
+    selectTab(next)
+    document.getElementById(`lb-tab-${next}`)?.focus()
   }
 
   return (
-    <>
-      <div className="pb-lb__table-wrap" role="table" aria-label="Standings">
-        <div className="pb-lb__thead" role="rowgroup">
-          <div className="pb-lb__tr pb-lb__tr--head" role="row">
-            <span role="columnheader">#</span>
-            <span role="columnheader">{primaryLabel}</span>
-            <span role="columnheader" className="pb-lb__col-wins">
-              Champs
-            </span>
-          </div>
-        </div>
-        <div className="pb-lb__tbody" role="rowgroup">
-          {rows.map((r, i) => (
-            <div key={`${i}-${r.primary}`} className="pb-lb__tr" role="row">
-              <span className="pb-lb__rank" role="cell">
-                {r.rank}
-              </span>
-              <span role="cell">{r.primary}</span>
-              <span className="pb-lb__col-wins" role="cell">
-                {r.wins}
-              </span>
-            </div>
+    <section className="pb-lb" aria-labelledby="lb-heading">
+      <h2 id="lb-heading">Leaderboard</h2>
+      <p className="pb-lb__subtitle">Every Champs win. Every place earned.</p>
+      <div className="pb-lb__controls">
+        <div className="pb-seg" role="tablist" aria-label="Leaderboard type">
+          {(['teams', 'players'] as const).map(value => (
+            <button key={value} id={`lb-tab-${value}`} type="button" role="tab"
+              aria-selected={tab === value} aria-controls="lb-results" tabIndex={tab === value ? 0 : -1}
+              className={`pb-seg__btn${tab === value ? ' pb-seg__btn--active' : ''}`}
+              onKeyDown={handleTabKey} onClick={() => selectTab(value)}>
+              {value === 'teams' ? 'Teams' : 'Players'}
+            </button>
           ))}
         </div>
+        <label className="pb-lb__search">
+          <span className="sr-only">Search {tab}</span>
+          <input type="search" placeholder={`Search ${tab}`} value={query}
+            onChange={event => { setQuery(event.target.value); setPage(1) }} />
+        </label>
       </div>
-
-      <ul className="pb-lb__cards" aria-label="Standings cards">
-        {rows.map((r, i) => (
-          <li key={`${i}-${r.primary}`} className="pb-lb__card">
-            <span className="pb-lb__card-rank">{r.rank}</span>
-            <div className="pb-lb__card-main">
-              <span className="pb-lb__card-name">{r.primary}</span>
-              <span className="pb-lb__card-meta">
-                {primaryLabel} · Champs wins
+      <div id="lb-results" role="tabpanel" aria-labelledby={`lb-tab-${tab}`} tabIndex={0}>
+        <table className="pb-lb__table" aria-label={`${tab === 'teams' ? 'Team' : 'Player'} standings`}>
+          <thead><tr><th scope="col">#</th><th scope="col">{tab === 'teams' ? 'Team' : 'Player'}</th><th scope="col">Champs wins</th></tr></thead>
+          <tbody>
+            {visibleRows.map(row => (
+              <tr key={row.key} className={row.rank === 1 ? 'pb-lb__leader' : undefined}>
+                <td>{String(row.rank).padStart(2, '0')}</td><th scope="row">{row.name}</th><td>{row.wins}</td>
+              </tr>
+            ))}
+            {visibleRows.length === 0 && <tr><td colSpan={3} className="pb-lb__empty">
+              {rows.length === 0 ? 'No results recorded yet.' : 'No matches. Try another name.'}
+            </td></tr>}
+          </tbody>
+        </table>
+        <div className="pb-lb__pagination">
+          <p role="status">{filtered.length ? `Showing ${start + 1}–${start + visibleRows.length} of ${filtered.length} ${tab}` : `0 ${tab}`}</p>
+          <nav aria-label="Leaderboard pages">
+            <button type="button" aria-label="Previous page" disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>‹</button>
+            {pages.map((number, index) => (
+              <span key={number} className="pb-lb__page-item">
+                {index > 0 && number - pages[index - 1] > 1 && <span aria-hidden="true" className="pb-lb__ellipsis">…</span>}
+                <button type="button" aria-label={`Page ${number}`} aria-current={number === currentPage ? 'page' : undefined} onClick={() => setPage(number)}>{number}</button>
               </span>
-            </div>
-            <span className="pb-lb__card-wins">{r.wins}</span>
-          </li>
-        ))}
-      </ul>
-    </>
+            ))}
+            <button type="button" aria-label="Next page" disabled={currentPage === pageCount} onClick={() => setPage(currentPage + 1)}>›</button>
+          </nav>
+        </div>
+      </div>
+      <p className="pb-lb__note">Final totals: Champs court wins across every recorded Season 4 week.</p>
+    </section>
   )
 }

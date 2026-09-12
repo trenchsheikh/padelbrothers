@@ -112,3 +112,5 @@
 @media (prefers-reduced-motion: reduce) {
   .pb-landing *, .pb-landing *::before, .pb-landing *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+.pb-landing__capacity { margin-top: .8rem !important; font-weight: 700; font-size: clamp(1rem, 1.4vw, 1.3rem); }

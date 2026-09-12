@@ -4,7 +4,7 @@ The homepage uses a responsive, image-free design. Season 4 standings remain at 
 
 To connect the Join buttons to the official community invitation or registration page, copy `.env.example` to `.env.local` and set `VITE_COMMUNITY_URL` to its HTTPS URL. Restart the dev server or rebuild after changing it. Without a URL, the buttons open an accessible notice that registration details are pending; no signup data is collected.
 
-The Season 5 copy retains the existing June–July 2026 announcement. Update the announcement in `src/pages/WelcomePage.tsx` when new dates are confirmed.
+The Season 5 copy retains the October–December 2026 announcement with 10 courts and 40 players every week. Update the announcement in `src/pages/WelcomePage.tsx` when new dates are confirmed.
 
 # React + TypeScript + Vite
 

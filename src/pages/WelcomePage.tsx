@@ -59,7 +59,8 @@ export function WelcomePage() {
             <h2 id="season-five-title">Season five</h2>
             <div className="pb-landing__season-details">
               <p className="pb-landing__venue">S3 Finchley Padel Club</p>
-              <p className="pb-landing__dates">June — July 2026</p>
+              <p className="pb-landing__dates">October — December 2026</p>
+              <p className="pb-landing__capacity">10 courts · 40 players every week</p>
               <p className="pb-landing__season-tagline">New courts. Same brotherhood.</p>
               <details className="pb-landing__details">
                 <summary>Find out more <span aria-hidden="true">+</span></summary>
